@@ -241,7 +241,7 @@
                 var result = attributes.reduce(function (prev, attr) {
                         var fn = starter[attr[0]] || starter.attributes;
                         return prev + fn(attr);
-                    }, "") || item.tag;
+                    }, item.tag=="*"?"":item.tag);
                 result = _pseudos.reduce(function (prev, pseudo) {
                     var fn = pseudos[pseudo[0]];
                     return prev + fn(pseudo);

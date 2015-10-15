@@ -9,7 +9,7 @@ module.exports = function (grunt) {
             appDir:__dirname,
             baseUrl: __dirname
         });
-        var generateInit = requirejs('../src/generate');
+        var generateInit = requirejs('../../src/generate');
 
         grunt.file.write('tmp/js-init.js', generateInit(modConfig));
     });
