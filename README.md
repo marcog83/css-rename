@@ -41,3 +41,29 @@ If you need just the query, not the DOM element, you can use getCssName function
 
  $(query).doSomething();
 ```
+
+#Sample
+sample folder contains a demo app that minify CSS, HTML and creates a map of selectors.
+
+The grunt task that allow you to minify is `class-id-minifier`
+
+```javascript
+module.exports={
+
+    sample: {
+        options: {
+            jsMapFile: 'sample/minified/map.js',
+            jsMapDevFile: 'sample/map.js',
+            jsWrapper:"define(function(){return {{code}};})"
+        },
+        files: [
+            {
+                expand: true,
+                cwd: 'sample',
+                src: '*.{html,css}',
+                dest: 'sample/minified'
+            }
+        ]
+    }
+};
+```

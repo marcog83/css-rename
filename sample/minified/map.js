@@ -1,4 +1,6 @@
-cssr.CLASSES_MAP = {
-    "content-CTR": "a",
-    "content-CNT": "b"
-};
+define(function () {
+    return {
+        "content-CTR": "a",
+        "content-CNT": "b"
+    };
+})

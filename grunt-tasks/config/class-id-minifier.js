@@ -8,7 +8,7 @@ module.exports={
         options: {
             jsMapFile: 'sample/minified/map.js',
             jsMapDevFile: 'sample/map.js',
-            jsWrapper:"cssr.CLASSES_MAP={{code}};"
+            jsWrapper:"define(function(){return {{code}};})"
         },
         files: [
             {
